@@ -27,19 +27,15 @@ export class StudentService {
 
 
     findAll(): Observable<Student[]> {
-        alert(28);
         return this.http.get<Student[]>(this.getStudents);
     }
 
 
     findById(id: number): Observable<Student> {
-
         return this.http.get<Student>(this.findByIdUrl + id);
     }
 
     createStudent(student: Student): Observable<Student> {
-        alert(StudentService.saveStudent);
-        alert(student.firstName);
         console.log(student.firstName);
         return this.http.post<Student>(StudentService.saveStudent, student, { headers: this.headers });
     }
@@ -48,8 +44,5 @@ export class StudentService {
     deleteByStudentId(id: number): Observable<Object> {
         return this.http.delete(this.deleteStudentById + id);
     }
-
-
-
 
 }

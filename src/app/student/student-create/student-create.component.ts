@@ -10,7 +10,7 @@ import {first}from 'rxjs/operators';
 @Component({
     selector: 'app-student-create',
     templateUrl: './student-create.component.html',
-    styleUrls: ['./student-create.component.css'],
+
     providers: [StudentService]
 
 })
